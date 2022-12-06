@@ -1,0 +1,175 @@
+.page1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.circle {
+    width: 7vw;
+    height: 7vw;
+    background-color: red;
+    border-radius: 10vw;
+    position: relative;
+    left: 1vw;
+    top: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2vw;
+
+    // inner circle
+    button {
+        width: 1vw;
+        height: 6.5vw;
+        background-color: rgb(31, 31, 31);
+        border-radius: 10vw;
+        position: relative;
+        transition: 1s all;
+
+        &:hover {
+            background-color: rgb(52, 0, 0);
+        }
+    }
+}
+
+@keyframes opennclose {
+    0% {
+        width: 1vw;
+    }
+
+    50% {
+        width: 2vw;
+    }
+
+    100% {
+        width: 1vw;
+    }
+}
+
+@keyframes opennclose2 {
+    0% {
+        width: 5.5vw;
+    }
+
+    50% {
+        width: 6vw;
+    }
+
+    100% {
+        width: 5.5vw;
+    }
+}
+
+.openUp {
+    animation: 3s opennclose2 infinite linear;
+
+    &:hover {
+        width: 5.5vw;
+    }
+}
+
+.opennclose {
+    animation: 3s opennclose infinite linear;
+    background-color: blue;
+}
+
+.name {
+    width: 100vw;
+
+    span {
+        display: flex;
+        align-items: center;
+    }
+
+    h1 {
+        color: black;
+        padding-right: .2vw;
+        font-size: 8vw;
+        display: inline;
+        position: relative;
+        transition: .5s all;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            transform: translateY(-1vw);
+
+        }
+    }
+
+    a {}
+
+    .btn {
+
+
+        border-radius: .05vw;
+        font-size: 1.45vw;
+        color: black;
+        margin-top: 2vw;
+        font-family: 'normal';
+        position: relative;
+        transition: 1s all;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3vw;
+            height: .01vw;
+            background-color: black;
+            ;
+            transition: .5s all;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 3vw;
+            height: .01vw;
+            background-color: black;
+            ;
+            transition: .5s all;
+        }
+
+        &:hover {
+            color: antiquewhite;
+
+            &:before,
+            &:after {
+                width: 9vw;
+            }
+
+        }
+
+        &:active {
+            transform: scale(.2);
+        }
+
+    }
+}
+
+.lastname {
+    h1 {
+        &:hover {
+            transform: translateY(1vw);
+        }
+    }
+
+}
+
+.pfp {
+    background-image: url("media/shawn.jpg");
+    background-size: cover;
+    height: 45vw;
+    width: 23.3vw;
+    position: absolute;
+    bottom: 5vw;
+    left: 65vw;
+
+}
