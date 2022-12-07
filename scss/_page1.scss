@@ -28,6 +28,7 @@
         border-radius: 10vw;
         position: relative;
         transition: 1s all;
+        left: 0vw;
 
         &:hover {
             background-color: rgb(52, 0, 0);
@@ -112,6 +113,7 @@
         font-family: 'normal';
         position: relative;
         transition: 1s all;
+        z-index: 0;
 
         &:after {
             content: '';

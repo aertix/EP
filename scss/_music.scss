@@ -19,14 +19,21 @@
     background-color: rgb(23, 23, 23);
     box-shadow: 0 0 20px 4px gray;
 
+    .die {
+        font-size: 2vw;
+    }
+
     iframe {
         transition: 1s all;
-        cursor: pointer;
-        opacity: .5;
+
+
+        opacity: .3;
+        height: 8vw;
 
         &:hover {
-            height: 20vw;
+            height: 15vw;
             opacity: 1;
+            cursor: pointer;
         }
     }
 }

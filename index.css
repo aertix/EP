@@ -128,9 +128,30 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .fadeOut {
   -webkit-animation: 1s fadeOut forwards;
           animation: 1s fadeOut forwards;
+}
+
+.fadeIn {
+  -webkit-animation: 1s fadeIn forwards;
+          animation: 1s fadeIn forwards;
 }
 
 button {
@@ -210,6 +231,13 @@ button {
 .button-three {
   --button-color: black;
   overflow: hidden;
+  position: absolute;
+  top: 0.005vw;
+  left: 0.005vw;
+  z-index: 10000;
+}
+.button-three svg {
+  width: 5vw;
 }
 
 .button-three .hamburger {
@@ -254,7 +282,8 @@ button {
   font-family: "Great Vibes", cursive;
   font-size: 2vw;
   position: absolute;
-  top: 0.7vw;
+  top: 1.5vw;
+  left: 5.5vw;
 }
 
 @-webkit-keyframes scroll {
@@ -310,14 +339,35 @@ button {
   background-color: rgb(23, 23, 23);
   box-shadow: 0 0 20px 4px gray;
 }
+.songs .die {
+  font-size: 2vw;
+}
 .songs iframe {
   transition: 1s all;
-  cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.3;
+  height: 8vw;
 }
 .songs iframe:hover {
-  height: 20vw;
+  height: 15vw;
   opacity: 1;
+  cursor: pointer;
+}
+
+.navular {
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  z-index: 1000;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: antiquewhite;
+  flex-direction: column;
+  align-items: center;
+}
+.navular h1 {
+  font-size: 4vw;
 }
 
 canvas {
@@ -438,6 +488,7 @@ main {
   border-radius: 10vw;
   position: relative;
   transition: 1s all;
+  left: 0vw;
 }
 .circle button:hover {
   background-color: rgb(52, 0, 0);
@@ -533,6 +584,7 @@ main {
   font-family: "normal";
   position: relative;
   transition: 1s all;
+  z-index: 0;
 }
 .name .btn:after {
   content: "";
